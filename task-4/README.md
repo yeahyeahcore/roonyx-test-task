@@ -121,3 +121,6 @@ export const Button = ({ onClick }: ButtonProps) => (
 ```
 
 3. What benefits and drawbacks of each method?
+
+- Splitting the component can be useful with reuse. But it's required to create components more flexible and convenient to use.
+- In some cases, we need to realize Higher-Order Component. And in these cases using this style can be useful.

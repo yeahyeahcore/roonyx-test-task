@@ -35,8 +35,6 @@ const Child: FC = () => {
 First option:
 
 ```
-src/components/parent
-
 import { Child } from "@/components/child"
 
 export const Parent = () => (
@@ -44,9 +42,9 @@ export const Parent = () => (
     <Child>{(open) => open && <SomeOtherComponent/>}</Child>
   </div>
 );
+```
 
-src/components/child
-
+```
 import { useReducer, ReactNode } from "react";
 
 type ChildProps = {
@@ -68,8 +66,6 @@ const Child = ({ children }: ChildProps) => {
 Second option:
 
 ```
-src/components/parent
-
 import React, { useReducer } from "react";
 
 import { Child } from "@/components/child"
@@ -84,9 +80,9 @@ export const Parent = () => {
     </div>
   );
 }
+```
 
-src/components/child
-
+```
 type ChildProps = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   children?: string;
