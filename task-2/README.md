@@ -9,3 +9,25 @@ Implement the `counter` function according to requirements:
 - First function allows us to get the current counter value.
 - Second function increases the internal counter value by one.
 - Multiple calls of `counter` function create independent instances of counter
+
+Example:
+
+```
+export function counter() {
+}
+
+const [getA, nextA] = counter(1);
+
+getA(); // 1
+nextA();
+getA(); // 2
+
+const [getB, nextB] = counter(10);
+
+nextB();
+getA(); // 2
+getB(); // 11
+nextA();
+getA(); // 3
+getB(); // 11
+```
